@@ -1,0 +1,15 @@
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/bin/Debug/net8.0/CarvedRock.Data.deps.json
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/bin/Debug/net8.0/CarvedRock.Data.runtimeconfig.json
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/bin/Debug/net8.0/CarvedRock.Data.dll
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/bin/Debug/net8.0/CarvedRock.Data.pdb
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.csproj.AssemblyReference.cache
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.AssemblyInfoInputs.cache
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.AssemblyInfo.cs
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.csproj.CoreCompileInputs.cache
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.sourcelink.json
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.dll
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/refint/CarvedRock.Data.dll
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.pdb
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/CarvedRock.Data.genruntimeconfig.cache
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/Debug/net8.0/ref/CarvedRock.Data.dll

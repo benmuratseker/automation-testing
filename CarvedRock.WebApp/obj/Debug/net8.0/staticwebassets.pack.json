@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/obj/Debug/net8.0/scopedcss/projectbundle/CarvedRock.WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/CarvedRock.WebApp.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/css/custom.css",
+      "PackagePath": "staticwebassets/css/custom.css"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/css/main.css",
+      "PackagePath": "staticwebassets/css/main.css"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/images/shutterstock_222721876.jpg",
+      "PackagePath": "staticwebassets/images/shutterstock_222721876.jpg"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/images/shutterstock_475046062.jpg",
+      "PackagePath": "staticwebassets/images/shutterstock_475046062.jpg"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/images/shutterstock_6170527.jpg",
+      "PackagePath": "staticwebassets/images/shutterstock_6170527.jpg"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/images/shutterstock_645036007.jpg",
+      "PackagePath": "staticwebassets/images/shutterstock_645036007.jpg"
+    },
+    {
+      "Id": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.WebApp/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.CarvedRock.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.CarvedRock.WebApp.props",
+      "PackagePath": "build\\CarvedRock.WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.CarvedRock.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\CarvedRock.WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.CarvedRock.WebApp.props",
+      "PackagePath": "buildTransitive\\CarvedRock.WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,427 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/CarvedRock.InnerLoop.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj",
+        "projectName": "CarvedRock.Api",
+        "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj",
+        "packagesPath": "/Users/muratseker/.nuget/packages/",
+        "outputPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/muratseker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/CarvedRock.Domain.csproj": {
+                "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/CarvedRock.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[1.0.0-beta.7, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Enrichers.Span": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/CarvedRock.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/CarvedRock.Core.csproj",
+        "projectName": "CarvedRock.Core",
+        "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/CarvedRock.Core.csproj",
+        "packagesPath": "/Users/muratseker/.nuget/packages/",
+        "outputPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/muratseker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/CarvedRock.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/CarvedRock.Data.csproj",
+        "projectName": "CarvedRock.Data",
+        "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/CarvedRock.Data.csproj",
+        "packagesPath": "/Users/muratseker/.nuget/packages/",
+        "outputPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/muratseker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/CarvedRock.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/CarvedRock.Domain.csproj",
+        "projectName": "CarvedRock.Domain",
+        "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/CarvedRock.Domain.csproj",
+        "packagesPath": "/Users/muratseker/.nuget/packages/",
+        "outputPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/muratseker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/CarvedRock.Core.csproj": {
+                "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Core/CarvedRock.Core.csproj"
+              },
+              "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/CarvedRock.Data.csproj": {
+                "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Data/CarvedRock.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/CarvedRock.InnerLoop.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/CarvedRock.InnerLoop.Tests.csproj",
+        "projectName": "CarvedRock.InnerLoop.Tests",
+        "projectPath": "/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/CarvedRock.InnerLoop.Tests.csproj",
+        "packagesPath": "/Users/muratseker/.nuget/packages/",
+        "outputPath": "/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/muratseker/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj": {
+                "projectPath": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
