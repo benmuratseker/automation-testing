@@ -34,6 +34,8 @@ public class ProductValidatorTests(ITestOutputHelper testOutputHelper)
     
     [Theory]
     [InlineData("", "Name is required.")]
+    [InlineData(" ", "Name is required.")]
+    [InlineData("duplicate", "A product with the same name already exists.")]
     public async Task NameValidationErrors(string nameToValidate, string errorMessage)
     {
         //Arrange
@@ -47,6 +49,7 @@ public class ProductValidatorTests(ITestOutputHelper testOutputHelper)
         };
         var repo = Substitute.For<ICarvedRockRepository>();
         repo.IsProductNameUniqueAsync(Arg.Any<string>()).Returns(true);
+        repo.IsProductNameUniqueAsync("duplicate").Returns(false);
 
         var validator = new NewProductValidator(repo);
 
