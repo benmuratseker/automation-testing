@@ -1,3 +1,4 @@
+using Bogus;
 using CarvedRock.Core;
 using CarvedRock.Data;
 using CarvedRock.Domain;
@@ -8,6 +9,8 @@ namespace CarvedRock.InnerLoop.Tests;
 
 public class ProductValidatorTests(ITestOutputHelper testOutputHelper)
 {
+    //generate test data from Bogus
+    private readonly Faker _faker = new();
     [Fact]
     public async Task NameValidationError_Spaces()
     {
@@ -36,12 +39,13 @@ public class ProductValidatorTests(ITestOutputHelper testOutputHelper)
     [InlineData("", "Name is required.")]
     [InlineData(" ", "Name is required.")]
     [InlineData("duplicate", "A product with the same name already exists.")]
+    [InlineData("__too_long__", "Name must not exceed 50 characters.")]
     public async Task NameValidationErrors(string nameToValidate, string errorMessage)
     {
         //Arrange
         var newProduct = new NewProductModel
         {
-            Name = nameToValidate,
+            Name = nameToValidate == "__too_long__" ? _faker.Lorem.Letter(51) : nameToValidate,
             Description = "A new product",
             Category = "boots",
             Price = 100,

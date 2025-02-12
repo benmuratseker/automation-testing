@@ -365,3 +365,4 @@
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/obj/Debug/net8.0/CarvedRock.InnerLoop.Tests.pdb
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/obj/Debug/net8.0/CarvedRock.InnerLoop.Tests.genruntimeconfig.cache
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/obj/Debug/net8.0/ref/CarvedRock.InnerLoop.Tests.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Bogus.dll
