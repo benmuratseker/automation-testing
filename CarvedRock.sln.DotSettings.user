@@ -9,5 +9,6 @@
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationErrors&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationError_Spaces&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.GetProducts_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.Get_Products_Success&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
