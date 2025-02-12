@@ -2,6 +2,7 @@ using System.Net;
 using System.Text.Json;
 using CarvedRock.Core;
 using CarvedRock.InnerLoop.Tests.Utilities;
+using Microsoft.AspNetCore.Mvc;
 using Xunit.Abstractions;
 using Microsoft.AspNetCore.Mvc.Testing;
 
@@ -35,5 +36,18 @@ public class ProductControllerTests(WebApplicationFactory<Program> factory,
         
         // Assert
         Assert.Equal(6, products.Count());
+    }
+    
+    [Fact]
+    public async Task Get_Products_TroubleGivesProblemDetails()
+    {
+        // Arrange
+        var client = factory.CreateClient();
+        var problemDetail = await client.GetJsonResultAsync<ProblemDetails>("/product?category=trouble", HttpStatusCode.InternalServerError, outputHelper);
+        
+        // Assert
+        Assert.NotNull(problemDetail.Title);
+        Assert.NotNull(problemDetail.Detail);
+        Assert.Contains("traceId", problemDetail.Extensions.Keys);
     }
 }
