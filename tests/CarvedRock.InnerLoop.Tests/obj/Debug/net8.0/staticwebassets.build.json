@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "bm5/KLHohicnnkpSWfZGh0FZ4+gM1XvzXby2mpuPeWg=",
+  "Source": "CarvedRock.InnerLoop.Tests",
+  "BasePath": "_content/CarvedRock.InnerLoop.Tests",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/CarvedRock.Api.csproj",
+      "Version": 2,
+      "Source": "CarvedRock.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
