@@ -11,6 +11,7 @@ namespace CarvedRock.InnerLoop.Tests;
 
 // public class ProductControllerTests(WebApplicationFactory<Program> factory, 
 //     ITestOutputHelper outputHelper) : IClassFixture<WebApplicationFactory<Program>>
+[CollectionDefinition(nameof(InnerLoopCollection))]
 public class ProductControllerTests(CustomApiFactory factory, 
     ITestOutputHelper outputHelper) : IClassFixture<CustomApiFactory>
 {
