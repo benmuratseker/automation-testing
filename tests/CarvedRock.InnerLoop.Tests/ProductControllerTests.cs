@@ -38,7 +38,7 @@ public class ProductControllerTests(CustomApiFactory factory,
         var products = await client.GetJsonResultAsync<IEnumerable<ProductModel>>("/product?category=all", HttpStatusCode.OK, outputHelper);
         
         // Assert
-        Assert.Equal(6, products.Count());
+        Assert.True(products.Count() >= 6);
     }
     
     [Fact]
@@ -71,6 +71,58 @@ public class ProductControllerTests(CustomApiFactory factory,
         Assert.Equal("One or more validation errors occurred.", problem.Detail);
         Assert.Contains("Name", problem.Extensions.Keys);
         Assert.Contains("Name is required.", problem.Extensions["Name"]!.ToString());
+    }
+    
+    [Fact]
+    public async Task PostProductAnonymousIsUnauthorized()
+    {
+        var client = factory.CreateClient();
+        
+        var newProduct = _newProductFaker.Generate();
+
+        var response = await client.PostAsJsonAsync("/product", newProduct);        
+        Assert.Equal(HttpStatusCode.Unauthorized, response.StatusCode);
+    }
+
+    [Theory]
+    [InlineData("Erik Smith", "Microsoft")]
+    [InlineData("Alice Smith", null)]
+    [InlineData("Bob Dahl", null)]
+    [InlineData("Bobby Smith", null)]
+    public async Task PostProductForbidden(string name, string? idp)
+    {
+        var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Authorization", name);
+        if (idp != null)
+        {
+            client.DefaultRequestHeaders.Add("X-Test-idp", idp);
+        }
+        var newProduct = _newProductFaker.Generate();
+
+        var response = await client.PostAsJsonAsync("/product", newProduct);
+        Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
+    }
+
+    [Theory]
+    [InlineData("Erik Dahl", "Google")]
+    [InlineData("Bob Smith", null)]
+    [InlineData("Bob Smith", "Google")]
+    [InlineData("Alice Smith", "Google")]
+    public async Task PostProductSuccess(string name, string? idp)
+    {
+        var client = factory.CreateClient();
+        client.DefaultRequestHeaders.Add("X-Authorization", name);
+        if (idp != null)
+        {
+            client.DefaultRequestHeaders.Add("X-Test-idp", idp);
+        }
+        var newProduct = _newProductFaker.Generate();
+
+        var response = await client.PostForJsonResultAsync<ProductModel>
+            ("/product", newProduct, HttpStatusCode.Created, outputHelper);
+
+        Assert.NotNull(response);
+        Assert.Equal(newProduct.Name, response.Name);
     }
     
     private readonly Faker<NewProductModel> _newProductFaker = new Faker<NewProductModel>()
