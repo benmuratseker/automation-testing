@@ -26,7 +26,7 @@ public static class HttpClientExtensions
         var response = await httpClient.PostAsJsonAsync(requestUri, content);
         return await DeserializeAndCheckResponse<T>(response, expectedStatusCode, testOutputHelper);
     }
-    public static async Task<T> DeserializeAndCheckResponse<T>(
+    private static async Task<T> DeserializeAndCheckResponse<T>(
         HttpResponseMessage response, HttpStatusCode expectedStatusCode,
         ITestOutputHelper testOutputHelper)
     {

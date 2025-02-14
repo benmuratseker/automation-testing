@@ -9,8 +9,10 @@ using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace CarvedRock.InnerLoop.Tests;
 
-public class ProductControllerTests(WebApplicationFactory<Program> factory, 
-    ITestOutputHelper outputHelper) : IClassFixture<WebApplicationFactory<Program>>
+// public class ProductControllerTests(WebApplicationFactory<Program> factory, 
+//     ITestOutputHelper outputHelper) : IClassFixture<WebApplicationFactory<Program>>
+public class ProductControllerTests(CustomApiFactory factory, 
+    ITestOutputHelper outputHelper) : IClassFixture<CustomApiFactory>
 {
     [Fact]
     public async Task GetProducts_Success()
