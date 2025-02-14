@@ -1,16 +1,18 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AProblemDetails_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F656c392daf503fe14a1fe53fc449dbae6fe48d895df4a039d1ca03e2d837_003FProblemDetails_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=296a9860_002Dbfe5_002D44f5_002D856d_002D46da410bb9e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NameValidationErrors #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=296a9860_002Dbfe5_002D44f5_002D856d_002D46da410bb9e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NameValidationErrors #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.PostProductValidationFailure&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7ef4438_002D640b_002D4977_002Db0f1_002Df219e3e95cb9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NameValidationErrors" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7ef4438_002D640b_002D4977_002Db0f1_002Df219e3e95cb9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NameValidationErrors" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationErrors&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationError_Spaces&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.GetProducts_Success&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.Get_Products_Success&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.Get_Products_TroubleGivesProblemDetails&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.PostProductValidationFailure&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
