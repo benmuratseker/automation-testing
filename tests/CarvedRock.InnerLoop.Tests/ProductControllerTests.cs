@@ -15,6 +15,7 @@ namespace CarvedRock.InnerLoop.Tests;
 public class ProductControllerTests(CustomApiFactory factory, 
     ITestOutputHelper outputHelper) : IClassFixture<CustomApiFactory>
 {
+    private readonly Faker _faker = new();
     [Fact]
     public async Task GetProducts_Success()
     {
@@ -45,6 +46,31 @@ public class ProductControllerTests(CustomApiFactory factory,
         {
             Assert.Contains(products, p => p.Id == expectedProduct.Id);
         }
+    }
+
+    [Fact]
+    public async Task Get_Product_ById_Success()
+    {
+        var expectedProduct = _faker.PickRandom(factory.SharedFixture.OriginalProducts!);
+        var client = factory.CreateClient();
+        var product =
+            await client.GetJsonResultAsync<ProductModel>($"/product/{expectedProduct.Id}",
+                HttpStatusCode.OK, outputHelper);
+        
+        Assert.Equal(expectedProduct.Id, product.Id);
+        Assert.Equal(expectedProduct.Name, product.Name);
+        Assert.Equal(expectedProduct.Description, product.Description);
+        Assert.Equal(expectedProduct.Category, product.Category);
+        Assert.Equal(expectedProduct.Price, product.Price);
+    }
+
+    [Fact]
+    public async Task Get_Product_ById_NotFound()
+    {
+        var client = factory.CreateClient();
+        var response = await client.GetAsync("/product/99");
+        
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
     
     [Fact]
