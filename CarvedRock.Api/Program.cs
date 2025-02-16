@@ -83,16 +83,23 @@ builder.Services.AddValidatorsFromAssemblyContaining<NewProductValidator>();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<LocalContext>();
-    context.MigrateAndCreateData();
-}
+// using (var scope = app.Services.CreateScope())
+// {
+//     var services = scope.ServiceProvider;
+//     var context = services.GetRequiredService<LocalContext>();
+//     context.MigrateAndCreateData();
+// }
 app.UseExceptionHandler();  
 
 if (app.Environment.IsDevelopment())
 {
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        var context = services.GetRequiredService<LocalContext>();
+        context.MigrateAndCreateData();
+    }
+    
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {

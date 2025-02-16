@@ -11,7 +11,7 @@ namespace CarvedRock.InnerLoop.Tests;
 
 // public class ProductControllerTests(WebApplicationFactory<Program> factory, 
 //     ITestOutputHelper outputHelper) : IClassFixture<WebApplicationFactory<Program>>
-[CollectionDefinition(nameof(InnerLoopCollection))]
+[Collection(nameof(InnerLoopCollection))]
 public class ProductControllerTests(CustomApiFactory factory, 
     ITestOutputHelper outputHelper) : IClassFixture<CustomApiFactory>
 {
@@ -39,7 +39,12 @@ public class ProductControllerTests(CustomApiFactory factory,
         var products = await client.GetJsonResultAsync<IEnumerable<ProductModel>>("/product?category=all", HttpStatusCode.OK, outputHelper);
         
         // Assert
-        Assert.True(products.Count() >= 6);
+        Assert.True(products.Count() >= factory.SharedFixture.OriginalProducts!.Count);
+
+        foreach (var expectedProduct in factory.SharedFixture.OriginalProducts!)
+        {
+            Assert.Contains(products, p => p.Id == expectedProduct.Id);
+        }
     }
     
     [Fact]

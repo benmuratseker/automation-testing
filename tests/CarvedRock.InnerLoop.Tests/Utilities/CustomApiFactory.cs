@@ -7,17 +7,19 @@ using Microsoft.EntityFrameworkCore;
 namespace CarvedRock.InnerLoop.Tests.Utilities;
 
 // public class CustomApiFactory : WebApplicationFactory<Program>
-public class CustomApiFactory (SharedFixture fixture): WebApplicationFactory<Program>
+public class CustomApiFactory(SharedFixture fixture): WebApplicationFactory<Program>
 {
+    public SharedFixture SharedFixture => fixture;
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("innerloop-test");
+        
         builder.ConfigureTestServices(services =>
             services.AddAuthentication(TestAuthHandler.SchemeName)
                 .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
                     TestAuthHandler.SchemeName, _ => { }));
         
-        //
+        //use configure service to remove DbContextoptions and set up DbContext normally 
         builder.ConfigureServices(services =>
         {
             var dbContextDescriptor = services.SingleOrDefault(
@@ -29,7 +31,7 @@ public class CustomApiFactory (SharedFixture fixture): WebApplicationFactory<Pro
             
             //add back the container-based dbContext
             services.AddDbContext<LocalContext>(opts =>
-                opts.UseSqlite($"Data Source{SharedFixture.DatabaseName}")
+                opts.UseSqlite($"Data Source={SharedFixture.DatabaseName}")
                     .UseQueryTrackingBehavior(QueryTrackingBehavior
                         .NoTracking));
         });
