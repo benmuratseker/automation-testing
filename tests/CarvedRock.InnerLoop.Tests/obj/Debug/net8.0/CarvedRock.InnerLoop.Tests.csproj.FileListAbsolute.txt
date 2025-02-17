@@ -687,3 +687,11 @@
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll
 /Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/obj/Debug/net8.0/MvcTestingAppManifest.json
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Docker.DotNet.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Docker.DotNet.X509.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Npgsql.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/ICSharpCode.SharpZipLib.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Renci.SshNet.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Testcontainers.dll
+/Users/muratseker/Documents/repos/automation-testing/tests/CarvedRock.InnerLoop.Tests/bin/Debug/net8.0/Testcontainers.PostgreSql.dll

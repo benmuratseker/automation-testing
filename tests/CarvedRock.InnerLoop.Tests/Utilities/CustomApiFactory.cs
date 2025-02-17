@@ -30,10 +30,16 @@ public class CustomApiFactory(SharedFixture fixture): WebApplicationFactory<Prog
             services.Remove(ctx!);
             
             //add back the container-based dbContext
-            services.AddDbContext<LocalContext>(opts =>
-                opts.UseSqlite($"Data Source={SharedFixture.DatabaseName}")
-                    .UseQueryTrackingBehavior(QueryTrackingBehavior
-                        .NoTracking));
+            //SQLite --------------
+            // services.AddDbContext<LocalContext>(opts =>
+            //     opts.UseSqlite($"Data Source={SharedFixture.DatabaseName}")
+            //         .UseQueryTrackingBehavior(QueryTrackingBehavior
+            //             .NoTracking));
+            
+            //Postgres ------------
+            services.AddDbContext<LocalContext>(options => options
+                .UseNpgsql(SharedFixture.PostgresConnectionString)
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
         });
     }
 }
