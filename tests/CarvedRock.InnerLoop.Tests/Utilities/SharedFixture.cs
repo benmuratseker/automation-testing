@@ -1,6 +1,7 @@
 using CarvedRock.Data;
 using CarvedRock.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using Testcontainers.MsSql;
 using Testcontainers.PostgreSql;
 
 namespace CarvedRock.InnerLoop.Tests.Utilities;
@@ -8,7 +9,11 @@ namespace CarvedRock.InnerLoop.Tests.Utilities;
 public class SharedFixture : IAsyncLifetime
 {
     public const string DatabaseName = "InMemTestDb;Mode=Memory;Cache=Shared;";
-    public string PostgresConnectionString => _dbContainer.GetConnectionString();
+
+    public string PostgresConnectionString =>
+        _dbContainer.GetConnectionString();
+
+    public string SqlConnectionString => _sqlContainer.GetConnectionString();
     public List<Product>? OriginalProducts { get; private set; }
     private LocalContext? _dbContext;
 
@@ -17,19 +22,29 @@ public class SharedFixture : IAsyncLifetime
         .WithUsername("carvedrock")
         .WithPassword("innerloop-ftw")
         .Build();
-    
+
+    private readonly MsSqlContainer _sqlContainer = new MsSqlBuilder()
+        .WithPassword("innerloop-ftw")
+        .Build();
+
     public async Task InitializeAsync()
     {
         //Postgress -------------
-        await _dbContainer.StartAsync();
+        #region Postgress
 
-        var optionsBuilder = new DbContextOptionsBuilder<LocalContext>()
-            .UseNpgsql(PostgresConnectionString);
-        _dbContext = new LocalContext(optionsBuilder.Options);
-        
-        
+        // await _dbContainer.StartAsync();
+        //
+        // var optionsBuilder = new DbContextOptionsBuilder<LocalContext>()
+        //     .UseNpgsql(PostgresConnectionString);
+        // _dbContext = new LocalContext(optionsBuilder.Options);
+
+        #endregion
+
+
         //SQLite ----------------
+
         #region SQLite
+
         // var options = new DbContextOptionsBuilder<LocalContext>()
         //     .UseSqlite($"Data Source={DatabaseName}")
         //     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
@@ -40,12 +55,18 @@ public class SharedFixture : IAsyncLifetime
         // await _dbContext.Database.EnsureDeletedAsync();
         // await _dbContext.Database.EnsureCreatedAsync();
         // await _dbContext.Database.OpenConnectionAsync();
-       
+
         #endregion
         
+        //MsSql -----------------
+        await _sqlContainer.StartAsync();
+        var optionsBuilder = new DbContextOptionsBuilder<LocalContext>()
+            .UseSqlServer(SqlConnectionString);
+        _dbContext = new LocalContext(optionsBuilder.Options);
+
         await _dbContext.Database.MigrateAsync();
-        _dbContext.InitializeTestData(15);
-        
+        _dbContext.InitializeTestData(50);
+
         OriginalProducts = await _dbContext.Products.ToListAsync();
     }
 

@@ -78,9 +78,15 @@ builder.Services.AddScoped<IProductLogic, ProductLogic>();
 //         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
 //Postres-----------
+// builder.Services.AddDbContext<LocalContext>(options => options
+//     .UseNpgsql(builder.Configuration.GetConnectionString("CarvedRockPostgres"))
+//     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+
+//SQL Server--------
 builder.Services.AddDbContext<LocalContext>(options => options
-    .UseNpgsql(builder.Configuration.GetConnectionString("CarvedRockPostgres"))
+    .UseSqlServer(builder.Configuration.GetConnectionString("CarvedRockSqlServer"))
     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+
 
 builder.Services.AddScoped<ICarvedRockRepository, CarvedRockRepository>();
 

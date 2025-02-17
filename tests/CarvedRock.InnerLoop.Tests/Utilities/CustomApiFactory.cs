@@ -37,8 +37,13 @@ public class CustomApiFactory(SharedFixture fixture): WebApplicationFactory<Prog
             //             .NoTracking));
             
             //Postgres ------------
+            // services.AddDbContext<LocalContext>(options => options
+            //     .UseNpgsql(SharedFixture.PostgresConnectionString)
+            //     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+            
+            //Sql Server ----------
             services.AddDbContext<LocalContext>(options => options
-                .UseNpgsql(SharedFixture.PostgresConnectionString)
+                .UseSqlServer(SharedFixture.SqlConnectionString)
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
         });
     }

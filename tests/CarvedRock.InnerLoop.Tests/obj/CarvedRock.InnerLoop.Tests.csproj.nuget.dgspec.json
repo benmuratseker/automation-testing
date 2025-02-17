@@ -231,6 +231,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -401,6 +405,10 @@
             "NSubstitute": {
               "target": "Package",
               "version": "[5.3.0, )"
+            },
+            "Testcontainers.MsSql": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             },
             "Testcontainers.PostgreSql": {
               "target": "Package",
