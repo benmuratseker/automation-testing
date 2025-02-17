@@ -288,3 +288,5 @@
 /Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/obj/Debug/net8.0/CarvedRock.Api.pdb
 /Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/obj/Debug/net8.0/CarvedRock.Api.genruntimeconfig.cache
 /Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/obj/Debug/net8.0/ref/CarvedRock.Api.dll
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/bin/Debug/net8.0/Npgsql.dll
+/Users/muratseker/Documents/repos/automation-testing/CarvedRock.Api/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

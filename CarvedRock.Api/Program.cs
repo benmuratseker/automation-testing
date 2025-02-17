@@ -68,13 +68,19 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductLogic, ProductLogic>();
 
-var filename = Path.Join(
-           Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-           builder.Configuration.GetConnectionString("CarvedRock"));
+//SQLite-------------
+// var filename = Path.Join(
+//            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+//            builder.Configuration.GetConnectionString("CarvedRock"));
+//
+// builder.Services.AddDbContext<LocalContext>(options => options
+//         .UseSqlite($"Data Source={filename}")
+//         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
+//Postres-----------
 builder.Services.AddDbContext<LocalContext>(options => options
-        .UseSqlite($"Data Source={filename}")
-        .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+    .UseNpgsql(builder.Configuration.GetConnectionString("CarvedRockPostgres"))
+    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
 builder.Services.AddScoped<ICarvedRockRepository, CarvedRockRepository>();
 
