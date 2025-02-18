@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{84D8649C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.InnerLoop.Tests", "tests\CarvedRock.InnerLoop.Tests\CarvedRock.InnerLoop.Tests.csproj", "{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.InnerLoop.WebApp.Tests", "CarvedRock.InnerLoop.WebApp.Tests\CarvedRock.InnerLoop.WebApp.Tests.csproj", "{72F8A0BA-3988-4B11-A887-3B95E16F5A90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F8A0BA-3988-4B11-A887-3B95E16F5A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F8A0BA-3988-4B11-A887-3B95E16F5A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F8A0BA-3988-4B11-A887-3B95E16F5A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F8A0BA-3988-4B11-A887-3B95E16F5A90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +68,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D} = {84D8649C-D010-45BB-B2BC-6F445BB2ABEF}
+		{72F8A0BA-3988-4B11-A887-3B95E16F5A90} = {84D8649C-D010-45BB-B2BC-6F445BB2ABEF}
 	EndGlobalSection
 EndGlobal
