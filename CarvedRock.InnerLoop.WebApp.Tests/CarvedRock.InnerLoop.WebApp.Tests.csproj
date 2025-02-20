@@ -30,4 +30,8 @@
       <Folder Include="Utilities\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CarvedRock.WebApp\CarvedRock.WebApp.csproj" />
+    </ItemGroup>
+
 </Project>
