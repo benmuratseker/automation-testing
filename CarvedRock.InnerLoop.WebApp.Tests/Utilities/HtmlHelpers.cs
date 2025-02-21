@@ -22,6 +22,8 @@ public class HtmlHelpers
             
             MapHeaders(response.Headers);
             MapHeaders(response.Content.Headers);
+            
+            htmlResponse.Content(content);
 
             void MapHeaders(HttpHeaders headers)
             {
