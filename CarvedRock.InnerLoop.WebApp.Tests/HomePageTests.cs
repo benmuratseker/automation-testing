@@ -31,12 +31,17 @@ public class HomePageTests(WebApplicationFactory<Program> factory, ITestOutputHe
 
         var additionalNavItems = new List<string> { "Sign in" };
         var expectedNavItems = _alwaysPresentNavItems.Concat(additionalNavItems);
-        
-        Assert.Equal(expectedNavItems.Count(), actualNavItems.Count());
-        foreach (var expectedNavItem in expectedNavItems)
+
+        var navItems = expectedNavItems.ToList();
+        Assert.Equal(navItems.Count(), actualNavItems.Count());
+        foreach (var expectedNavItem in navItems)
         {
             outputHelper.WriteLine($"Checking for nav item: {expectedNavItem}");
-            Assert.Contains(actualNavItems, item => item.Contains(expectedNavItem));
+            Assert.Contains(navItems, item => item.Contains(expectedNavItem));
         }
+
+        var actualImages = homePage.Images.Select(i => i.Source);
+        
+        outputHelper.WriteLine(homePage.Body!.OuterHtml);
     }
 }
