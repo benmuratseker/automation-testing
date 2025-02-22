@@ -32,9 +32,13 @@ public class SharedFixture : IAsyncLifetime
         .RuleFor(p => p.Category, f => f.PickRandom(_categories))
         .RuleFor(p => p.ImgUrl, f => f.Image.PicsumUrl());
     
-    public Task InitializeAsync()
+    public async Task InitializeAsync()
     {
-        await _em
+        await _emailContainer.StartAsync();
+
+        OriginalProducts = ProductFaker.Generate(10);
+
+        ProductServiceUrl = StartWireMockForProductService();
     }
 
     public Task DisposeAsync()
