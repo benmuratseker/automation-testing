@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarvedRock.InnerLoop.WebApp.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47a35711cc4d8bb0f8ebf1556b41fc1e1391a34a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a8de124b34033f35941c9610ddf5ab1ab5082b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarvedRock.InnerLoop.WebApp.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarvedRock.InnerLoop.WebApp.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

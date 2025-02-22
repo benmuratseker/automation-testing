@@ -19,9 +19,11 @@ public class HomePageTests(WebApplicationFactory<Program> factory, ITestOutputHe
         
         Assert.Equal(HttpStatusCode.OK, homePageResponse.StatusCode);
         
+        //get page content only
         // var homePageContent = await homePageResponse.Content.ReadAsStringAsync();
         // outputHelper.WriteLine(homePageContent);
         
+        //check content with anglesharp
         var homePage = await HtmlHelpers.GetDocumentAsync(homePageResponse);
 
         Assert.NotNull(homePage.Title);
