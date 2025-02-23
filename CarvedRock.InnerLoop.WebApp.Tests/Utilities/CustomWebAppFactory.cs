@@ -15,9 +15,15 @@ public class CustomWebAppFactory(SharedFixture fixture)
     {
         builder.UseEnvironment("innerloop-test");
 
-        builder.ConfigureServices(ProvideSubstituteForProductService);
+        builder.ConfigureAppConfiguration((_, configBuilder) =>
+        {
+            configBuilder.AddInMemoryCollection(new Dictionary<string, string>
+            {
+                ["CarvedRock:EmailPort"] = SharedFixture.EmailPort.ToString()
+            }!);
+        });
 
-        //builder.ConfigureServices(ProvideSubstituteForProductService);
+        builder.ConfigureServices(ProvideSubstituteForProductService);
 
         builder.ConfigureTestServices(services => services
             .AddAuthentication(TestAuthHandler.SchemeName)
