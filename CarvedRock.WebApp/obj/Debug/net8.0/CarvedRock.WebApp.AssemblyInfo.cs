@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarvedRock.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc58429880ac19dd1303595c7d087b2e36ac0daa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3374543f3c58ea1f0dd1360d7d77b58436da2934")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarvedRock.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarvedRock.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

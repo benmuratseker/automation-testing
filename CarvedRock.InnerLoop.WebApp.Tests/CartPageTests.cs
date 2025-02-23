@@ -66,7 +66,7 @@ public class CartPageTests(CustomWebAppFactory factory, ITestOutputHelper output
         var page = await HtmlHelpers.GetDocumentAsync(pageResponse);
         
         Assert.Equal(HttpStatusCode.OK, pageResponse.StatusCode);
-        var total = page.QuerySelector("#grand-total");
+        //var total = page.QuerySelector("#grand-total");
         Assert.Equal($"{expectedGrandTotal:C}", page.QuerySelector("[id=grand-total]")!.TextContent);
         
         outputHelper.WriteLine(page.Body!.OuterHtml);
