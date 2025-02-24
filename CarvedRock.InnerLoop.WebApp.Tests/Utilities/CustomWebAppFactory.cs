@@ -19,11 +19,12 @@ public class CustomWebAppFactory(SharedFixture fixture)
         {
             configBuilder.AddInMemoryCollection(new Dictionary<string, string>
             {
-                ["CarvedRock:EmailPort"] = SharedFixture.EmailPort.ToString()
+                ["CarvedRock:EmailPort"] = SharedFixture.EmailPort.ToString(),
+                ["CarvedRock:ApiBaseUrl"] = SharedFixture.ProductServiceUrl,
             }!);
         });
 
-        builder.ConfigureServices(ProvideSubstituteForProductService);
+        //builder.ConfigureServices(ProvideSubstituteForProductService);
 
         builder.ConfigureTestServices(services => services
             .AddAuthentication(TestAuthHandler.SchemeName)

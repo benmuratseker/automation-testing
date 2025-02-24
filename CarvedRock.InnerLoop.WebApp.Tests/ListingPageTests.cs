@@ -38,4 +38,21 @@ public class ListingPageTests(CustomWebAppFactory factory, ITestOutputHelper out
             Assert.Contains("Add to Cart", button.TextContent);
         }
     }
+
+    [Fact]
+    public async Task GetListingPageWithError()
+    {
+        var client = factory.CreateClient();
+        var pageResponse = await client.GetAsync($"/listing?cat=error");
+        var page = await HtmlHelpers.GetDocumentAsync(pageResponse);
+        
+        Assert.Equal(HttpStatusCode.InternalServerError, page.StatusCode);
+        outputHelper.WriteLine(page.Body!.OuterHtml);
+
+        var actualHeading = page.QuerySelectorAll("h1").Select(e => e.TextContent);
+        Assert.Equal("Error.", actualHeading.First());
+        
+        var actualMessage = page.QuerySelectorAll("h2").Select(e => e.TextContent);
+        Assert.Equal("An error occurred while processing your request.", actualMessage.First());
+    }
 }

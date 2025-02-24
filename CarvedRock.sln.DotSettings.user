@@ -4,7 +4,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASerilogLoggerFactory_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fb022b711530f8d315d6e795825dc072bf2bddbdc25975912698ecd272a62df8_003FSerilogLoggerFactory_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestClassException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fc61f24b31de7167d696176d44677a5f142f8fd6b6e22540176637c9bf7ee178_003FTestClassException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fc3ec25c53b94f51fa21da479c513e551efee2b5ae49a79934686d2bb714d46_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=296a9860_002Dbfe5_002D44f5_002D856d_002D46da410bb9e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NameValidationErrors #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=296a9860_002Dbfe5_002D44f5_002D856d_002D46da410bb9e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NameValidationErrors #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductControllerTests.PostProductValidationFailure&lt;/TestId&gt;
@@ -19,6 +19,7 @@
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.AdminPageTests.AdminOageAllowed&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.AdminPageTests.AdminPageAllowed&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.CartPageTests.GetLoggedInCartPageWithItems&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.ListingPageTests.GetListingPageWithError&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c5fb93e0_002D5ff9_002D436d_002D9f6b_002D11a6b0c96759/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AdminPageAllowed" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
@@ -29,7 +30,7 @@
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.CartPageTests.GetLoggedInEmptyCartPage&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7ef4438_002D640b_002D4977_002Db0f1_002Df219e3e95cb9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NameValidationErrors" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7ef4438_002D640b_002D4977_002Db0f1_002Df219e3e95cb9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NameValidationErrors" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationErrors&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::5F048861-4BCF-400B-B4C0-7BE48FAEFA5D::net8.0::CarvedRock.InnerLoop.Tests.ProductValidatorTests.NameValidationError_Spaces&lt;/TestId&gt;
@@ -40,5 +41,7 @@
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.HomePageTests.GetHomePage&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.ListingPageTests.GetListingPage&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.AdminPageTests.AdminPageForbidden&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.ListingPageTests.GetListingPageWithError&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::72F8A0BA-3988-4B11-A887-3B95E16F5A90::net8.0::CarvedRock.InnerLoop.WebApp.Tests.ListingPageTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
