@@ -23,8 +23,9 @@ public class CustomWebAppFactory(SharedFixture fixture)
                 ["CarvedRock:ApiBaseUrl"] = SharedFixture.ProductServiceUrl,
             }!);
         });
-
-        //builder.ConfigureServices(ProvideSubstituteForProductService);
+        
+        //comment this out to test listingpage error test
+        builder.ConfigureServices(ProvideSubstituteForProductService);
 
         builder.ConfigureTestServices(services => services
             .AddAuthentication(TestAuthHandler.SchemeName)

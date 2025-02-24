@@ -1,1 +1,15 @@
 /.idea/
+/tests/CarvedRock.InnerLoop.Tests/bin/
+/tests/CarvedRock.InnerLoop.Tests/obj/
+/tests/CarvedRock.InnerLoop.WebApp.Tests/bin/
+/tests/CarvedRock.InnerLoop.WebApp.Tests/obj/
+/CarvedRock.WebApp/bin/
+/CarvedRock.WebApp/obj/
+/CarvedRock.Domain/bin/
+/CarvedRock.Domain/obj/
+/CarvedRock.Data/bin/
+/CarvedRock.Data/obj/
+/CarvedRock.Core/bin/
+/CarvedRock.Core/obj/
+/CarvedRock.Api/bin/
+/CarvedRock.Api/obj/
