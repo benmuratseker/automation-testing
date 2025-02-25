@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WireMockRecorder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c137c9507739c413f33ba8e2379b8ff99fa25be0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef471a2ec89709bc9883154c6ff6455f28bebc0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("WireMockRecorder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WireMockRecorder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

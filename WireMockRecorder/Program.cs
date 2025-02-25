@@ -28,3 +28,7 @@ client.DefaultRequestHeaders.Add("Authorization", $"Bearer {config.GetValue<stri
 // Add whatever calls you want here - they will be recorded
 // they are going to the proxy and then forwarded to the real API
 var response = await client.GetAsync("/3/movie/top_rated");
+// Console.WriteLine(response.StatusCode);
+//Console.WriteLine(response.Headers.ToString());
+// Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+// Console.ReadLine();
