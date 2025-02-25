@@ -84,7 +84,7 @@ public class SharedFixture : IAsyncLifetime
                         Faker.Random.Int(0,
                             4000))) // delay anywhere from 0 - 4 secods
                 .WithBodyAsJson(GetProblemDetail)
-                .WithStatusCode(50));
+                .WithStatusCode(500));
         
         return server.Urls[0];
     }
