@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{A9ACEEC8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireMockRecorder", "WireMockRecorder\WireMockRecorder.csproj", "{812EC217-1C58-4B4D-8343-286F0D61BA41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireMockApiServer", "WireMockApiServer\WireMockApiServer.csproj", "{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{812EC217-1C58-4B4D-8343-286F0D61BA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{812EC217-1C58-4B4D-8343-286F0D61BA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{812EC217-1C58-4B4D-8343-286F0D61BA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{5F048861-4BCF-400B-B4C0-7BE48FAEFA5D} = {84D8649C-D010-45BB-B2BC-6F445BB2ABEF}
 		{72F8A0BA-3988-4B11-A887-3B95E16F5A90} = {84D8649C-D010-45BB-B2BC-6F445BB2ABEF}
 		{812EC217-1C58-4B4D-8343-286F0D61BA41} = {A9ACEEC8-6328-4744-BB7B-D3D7E6EB5FF8}
+		{F7B79EF5-1B6B-46D9-BE2E-5D7B071652A5} = {A9ACEEC8-6328-4744-BB7B-D3D7E6EB5FF8}
 	EndGlobalSection
 EndGlobal
