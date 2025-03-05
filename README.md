@@ -1,4 +1,5 @@
 # Automated Testing Strategies for ASP.NET Core
+###from Erik Dahl's Automation Testing Strategies with ASP.NET Core on pluralsight
 
 ## Getting Started
 
