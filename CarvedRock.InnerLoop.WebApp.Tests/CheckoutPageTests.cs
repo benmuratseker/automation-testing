@@ -69,53 +69,53 @@ public class CheckoutPageTests(CustomWebAppFactory factory, ITestOutputHelper ou
         outputHelper.WriteLine(page.Body!.OuterHtml);
     }
     
-    //[Fact]
-    // public async Task PostLoggedInCheckoutPageWithItems()
-    // {
-    //     var client = factory.CreateClient(new WebApplicationFactoryClientOptions
-    //     {
-    //         AllowAutoRedirect = false,
-    //     });
-    //     client.DefaultRequestHeaders.Add("X-Authorization", "Erik Smith");
-    //     client.DefaultRequestHeaders.Add("X-Test-idp", "Google");
-    //     client.DefaultRequestHeaders.Add("X-Test-email", "erik@test.com");
-    //
-    //     var (cookieHeader, expectedGrandTotal) = GetCookieHeaderValueAndGrandTotal();
-    //     client.DefaultRequestHeaders.Add(HeaderNames.Cookie, cookieHeader);
-    //
-    //     var pageResponse = await client.GetAsync("/checkout");
-    //     var page = await HtmlHelpers.GetDocumentAsync(pageResponse);
-    //     
-    //     Assert.Equal(HttpStatusCode.OK, pageResponse.StatusCode);
-    //
-    //     var checkoutResponse = await client.SendAsync(
-    //         (IHtmlFormElement)page.QuerySelector("form[id='checkout']")!,
-    //         (IHtmlInputElement)page.QuerySelector("input[id='submitCheckout']")!);
-    //
-    //     // Verify that the response is a redirect to the ThankYou page
-    //     Assert.Equal(HttpStatusCode.Redirect, checkoutResponse.StatusCode);
-    //     Assert.Equal("/ThankYou", checkoutResponse.Headers.Location!.OriginalString);
-    //     
-    //     // Verify that the email was sent and that it looks good
-    //     using (var emailClient = new HttpClient
-    //     { BaseAddress = new Uri(factory.SharedFixture.EmailServerUrl) })
-    //     {
-    //         var emailList = await emailClient.GetFromJsonAsync<IEnumerable<EmailModel>>("/api/messages");
-    //         var email = emailList!.FirstOrDefault(e => e.To == "erik@test.com");
-    //         Assert.NotNull(email);
-    //         Assert.Contains("Your CarvedRock Order", email!.Subject);
-    //         Assert.Equal("e-commerce@carvedrock.com", email.From);
-    //
-    //         var emailHtmlResponse = await emailClient.GetStringAsync($"/api/messages/{email.Id}/html");
-    //         var config = Configuration.Default;
-    //         using var context = BrowsingContext.New(config);
-    //         using var doc = await context.OpenAsync(req => req.Content(emailHtmlResponse));
-    //         outputHelper.WriteLine(doc.Body!.InnerHtml);
-    //
-    //         var message = doc.QuerySelector("h1")!.TextContent;
-    //         Assert.Contains("Thank you for your order!", message);
-    //     }
-    // }
+    [Fact]
+    public async Task PostLoggedInCheckoutPageWithItems()
+    {
+        var client = factory.CreateClient(new WebApplicationFactoryClientOptions
+        {
+            AllowAutoRedirect = false,
+        });
+        client.DefaultRequestHeaders.Add("X-Authorization", "Erik Smith");
+        client.DefaultRequestHeaders.Add("X-Test-idp", "Google");
+        client.DefaultRequestHeaders.Add("X-Test-email", "erik@test.com");
+    
+        var (cookieHeader, expectedGrandTotal) = GetCookieHeaderValueAndGrandTotal();
+        client.DefaultRequestHeaders.Add(HeaderNames.Cookie, cookieHeader);
+    
+        var pageResponse = await client.GetAsync("/checkout");
+        var page = await HtmlHelpers.GetDocumentAsync(pageResponse);
+        
+        Assert.Equal(HttpStatusCode.OK, pageResponse.StatusCode);
+    
+        var checkoutResponse = await client.SendAsync(
+            (IHtmlFormElement)page.QuerySelector("form[id='checkout']")!,
+            (IHtmlInputElement)page.QuerySelector("input[id='submitCheckout']")!);
+    
+        // Verify that the response is a redirect to the ThankYou page
+        Assert.Equal(HttpStatusCode.Redirect, checkoutResponse.StatusCode);
+        Assert.Equal("/ThankYou", checkoutResponse.Headers.Location!.OriginalString);
+        
+        // Verify that the email was sent and that it looks good
+        using (var emailClient = new HttpClient
+        { BaseAddress = new Uri(factory.SharedFixture.EmailServerUrl) })
+        {
+            var emailList = await emailClient.GetFromJsonAsync<IEnumerable<EmailModel>>("/api/messages");
+            var email = emailList!.FirstOrDefault(e => e.To == "erik@test.com");
+            Assert.NotNull(email);
+            Assert.Contains("Your CarvedRock Order", email!.Subject);
+            Assert.Equal("e-commerce@carvedrock.com", email.From);
+    
+            var emailHtmlResponse = await emailClient.GetStringAsync($"/api/messages/{email.Id}/html");
+            var config = Configuration.Default;
+            using var context = BrowsingContext.New(config);
+            using var doc = await context.OpenAsync(req => req.Content(emailHtmlResponse));
+            outputHelper.WriteLine(doc.Body!.InnerHtml);
+    
+            var message = doc.QuerySelector("h1")!.TextContent;
+            Assert.Contains("Thank you for your order!", message);
+        }
+    }
     
     private (string, double) GetCookieHeaderValueAndGrandTotal()
     {
