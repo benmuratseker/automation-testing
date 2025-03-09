@@ -95,6 +95,19 @@ builder.Services.AddValidatorsFromAssemblyContaining<NewProductValidator>();
 
 var app = builder.Build();
 
+#region For performance test
+
+app.UseSerilogRequestLogging(options =>
+{
+    options.EnrichDiagnosticContext = (diagnosticContext, httpContext) =>
+    {
+        diagnosticContext.Set("client_id",
+            httpContext.User.Claims.FirstOrDefault(c => c.Type == "client_id")
+                ?.Value);
+    };
+});
+#endregion
+
 // using (var scope = app.Services.CreateScope())
 // {
 //     var services = scope.ServiceProvider;
